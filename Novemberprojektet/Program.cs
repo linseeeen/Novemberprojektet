@@ -16,7 +16,7 @@ namespace Novemberprojektet
             Snake s1 = new Snake(100, 100, KeyboardKey.KEY_W, KeyboardKey.KEY_S, KeyboardKey.KEY_D, KeyboardKey.KEY_A);
             while(!Raylib.WindowShouldClose())
             {
-                Snake.UpdateAll();
+                GameObject.UpdateAll();
                 Raylib.BeginDrawing();
                 s1.Draw();
                 

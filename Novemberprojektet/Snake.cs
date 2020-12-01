@@ -5,18 +5,17 @@ using Raylib_cs;
 
 namespace Novemberprojektet
 {
-    public class Snake
+    public class Snake: GameObject
     {
-        public static List<Snake> snakes = new List<Snake>();
-
-        public Rectangle body = new Rectangle();
         public KeyboardKey upKey;
         public KeyboardKey downKey;
         public KeyboardKey rightKey;
         public KeyboardKey leftKey;
+        private int speed = 3;
 
-        public Snake(float x, float y, KeyboardKey upKey, KeyboardKey downKey, KeyboardKey rightKey, KeyboardKey leftKey){
-
+        public Snake(float x, float y, KeyboardKey upKey, KeyboardKey downKey, KeyboardKey rightKey, KeyboardKey leftKey)
+        {
+            gameObjects.Add(this);
             this.body.height = 50;
             this.body.width = 50;
             this.body.x = x;
@@ -25,36 +24,25 @@ namespace Novemberprojektet
             this.upKey = upKey;
             this.downKey = downKey;
             this.leftKey = leftKey;
-            this.rightKey = rightKey;
-
-            snakes.Add(this);
+            this.rightKey = rightKey; 
         }
-        public void MoveSnake()
+        public override void Update()
         {
             if (Raylib.IsKeyDown(upKey))
             {
-                this.body.y -= 3;
+                this.body.y -= speed;
             }
             else if (Raylib.IsKeyDown(downKey))
             {
-                this.body.y += 3;
+                this.body.y += speed;
             }
             else if (Raylib.IsKeyDown(leftKey))
             {
-                this.body.x -= 3;
+                this.body.x -= speed;
             }
             else if (Raylib.IsKeyDown(rightKey))
             {
-                this.body.x += 3;
-            }
-        }
-        public void Draw(){
-            Raylib.DrawRectangleRec(body, Color.RED);
-        }
-        public static void UpdateAll(){
-            foreach (Snake s in snakes)
-            {
-                s.MoveSnake();
+                this.body.x += speed;
             }
         }
     }
