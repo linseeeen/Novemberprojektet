@@ -11,15 +11,14 @@ namespace Novemberprojektet
         public KeyboardKey downKey;
         public KeyboardKey rightKey;
         public KeyboardKey leftKey;
-        private int speed = 3;
 
         public Snake(float x, float y, KeyboardKey upKey, KeyboardKey downKey, KeyboardKey rightKey, KeyboardKey leftKey)
         {
             gameObjects.Add(this);
-            this.body.height = 50;
-            this.body.width = 50;
-            this.body.x = x;
-            this.body.y = y;
+            this.rect.height = 50;
+            this.rect.width = 50;
+            this.rect.x = x;
+            this.rect.y = y;
 
             this.upKey = upKey;
             this.downKey = downKey;
@@ -30,20 +29,21 @@ namespace Novemberprojektet
         {
             if (Raylib.IsKeyDown(upKey))
             {
-                this.body.y -= speed;
+                this.rect.y -= speed;
             }
             else if (Raylib.IsKeyDown(downKey))
             {
-                this.body.y += speed;
+                this.rect.y += speed;
             }
             else if (Raylib.IsKeyDown(leftKey))
             {
-                this.body.x -= speed;
+                this.rect.x -= speed;
             }
             else if (Raylib.IsKeyDown(rightKey))
             {
-                this.body.x += speed;
+                this.rect.x += speed;
             }
+            
         }
     }
 }

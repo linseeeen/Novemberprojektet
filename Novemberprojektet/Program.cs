@@ -9,7 +9,7 @@ namespace Novemberprojektet
         static void Main(string[] args)
         {
             
-            Raylib.InitWindow(800, 800, "My awesome game");
+            Raylib.InitWindow(800, 800, "Snake");
             Raylib.SetTargetFPS(60);
             
 
