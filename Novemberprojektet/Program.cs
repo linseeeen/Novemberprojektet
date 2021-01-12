@@ -14,11 +14,13 @@ namespace Novemberprojektet
             
 
             Snake s1 = new Snake(100, 100, KeyboardKey.KEY_W, KeyboardKey.KEY_S, KeyboardKey.KEY_D, KeyboardKey.KEY_A);
+            Apple a1 = new Apple();
             while(!Raylib.WindowShouldClose())
             {
                 GameObject.UpdateAll();
                 Raylib.BeginDrawing();
                 s1.Draw();
+                a1.Draw();
                 
                 Raylib.ClearBackground(Color.YELLOW);
 

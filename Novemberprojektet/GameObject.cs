@@ -10,7 +10,7 @@ namespace Novemberprojektet
         public static List<GameObject> gameObjects = new List<GameObject>();
         public Random generator = new Random();
         public int speed = 3;
-        public bool appleExist = false;
+        public bool appleExist = true;
         public GameObject()
         {
             gameObjects.Add(this);
@@ -52,6 +52,10 @@ namespace Novemberprojektet
             {
                 g.Update();
                 g.Wall();
+            }
+            foreach (GameObject g in gameObjects)
+            {
+                Console.WriteLine(g);
             }
         }
         
