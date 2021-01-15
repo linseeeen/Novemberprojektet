@@ -5,6 +5,7 @@ namespace Novemberprojektet
 {
     public class Apple: GameObject
     {
+        // Appleklassens konstruktor, gemensamt för alla "apple" objekt
         public Apple(){
             gameObjects.Add(this);
             this.rect.height = 30;
@@ -13,6 +14,8 @@ namespace Novemberprojektet
             this.rect.y = generator.Next(30 * speed, 770 * speed) / speed;
             
         }
+        /*Kollar om det finns något äpple, 
+        */
         public override void Update()
         {
             if(appleExist == false)

@@ -53,10 +53,6 @@ namespace Novemberprojektet
                 g.Update();
                 g.Wall();
             }
-            foreach (GameObject g in gameObjects)
-            {
-                Console.WriteLine(g);
-            }
         }
         
     }
