@@ -21,10 +21,12 @@ namespace Novemberprojektet
             //programmet körs så länge man inte tryckt på x-et som stänger rutan
             while(!Raylib.WindowShouldClose())
             {
-                //Jag har en huvud klass med arv som kallas för GameObject, här samlas alla gameobjects som finns i spelet
+                /*Jag har en huvud klass med arv som kallas för GameObject, här samlas alla gameobjects som finns i spelet,
+                I denna del av koden så uppdateras spellogiken, med andra ord kollar den t.ex om spelaren trycker på någon knapp
+                */
                 GameObject.UpdateAll();
                 t1.Update();
-                //Här ritas grafiken ut.
+                //Här ritas grafiken ut. Den kollar på vad som ska ritas ut i denna frame och ritar ut det på skrämen
                 Raylib.BeginDrawing();
                 GameObject.DrawAll();
                 Text.Draw();
