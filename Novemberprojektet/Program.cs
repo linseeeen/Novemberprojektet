@@ -15,7 +15,7 @@ namespace Novemberprojektet
             /*Skapar mina objekt, detta gör att de faktiskt exsiterar så att spelaren kan se de i mitt spel och
             inte bara existerar i koden. Informationen om vad snake och äpple faktiskt ska göra hämtas sen från respektive klass.
             */
-            Snake s1 = new Snake(100, 100, KeyboardKey.KEY_W, KeyboardKey.KEY_S, KeyboardKey.KEY_D, KeyboardKey.KEY_A);
+            Snake s1 = new Snake(100, 200, KeyboardKey.KEY_W, KeyboardKey.KEY_S, KeyboardKey.KEY_D, KeyboardKey.KEY_A);
             Apple a1 = new Apple();
             Text t1 = new Text();
             //programmet körs så länge man inte tryckt på x-et som stänger rutan

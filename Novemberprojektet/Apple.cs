@@ -14,7 +14,7 @@ namespace Novemberprojektet
             this.rect.height = 30;
             this.rect.width = 30;
             this.rect.x = generator.Next(30 * speed, 770 * speed) / speed;
-            this.rect.y = generator.Next(30 * speed, 770 * speed) / speed;
+            this.rect.y = generator.Next(110 * speed, 770 * speed) / speed;
             
         }
         /*Kollar om det finns något äpple just nu, om det inte gör det kommer ett nytt att slumpas fram på en ny plats.
